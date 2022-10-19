@@ -19,6 +19,25 @@ class Entry {
     get entryDescription() {
         return this._entryDescription;
     }
+
+    deleteEntry(deleteThis) {
+        if (deleteThis > theCollection.length - 1) {
+            alert("No such entry");
+            return;
+        }
+        // going to update the class index properties?
+        theCollection.splice(deleteThis - 1, 1);
+    }
+
+    getAllOfOneType(type) {
+        let typeArray = [];
+        theCollection.forEach((entry) => {
+            if (entry.entryType == type) {
+                typeArray.push(entry);
+            }
+        });
+        console.log(typeArray);
+    }
 }
 
 class Book extends Entry {
@@ -55,11 +74,7 @@ editBtn.addEventListener("click", () => {
 });
 
 function createEntry() {
-    let newEntry = new Entry(
-        "Book",
-        "Pale Fire",
-        "The best novel ever written."
-    );
+    let newEntry = new Entry("Entry", "A pair of jeans", "Faithful denim.");
     theCollection.push(newEntry);
 }
 
