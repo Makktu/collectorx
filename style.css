@@ -1,0 +1,70 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+    background: rgb(23, 23, 25);
+    background: linear-gradient(
+        90deg,
+        rgba(23, 23, 25, 1) 0%,
+        rgba(43, 43, 52, 1) 11%,
+        rgb(68, 70, 78) 66%
+    );
+    color: rgb(236, 222, 222);
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 70vw;
+    height: 90vh;
+    border: 1px solid cyan;
+}
+
+.alpha-content {
+    height: 50vh;
+    width: 40vw;
+    border: 1px solid cyan;
+}
+
+.button-wrap {
+    display: flex;
+    flex-direction: column;
+}
+
+#new-entry {
+    background-color: greenyellow;
+    color: black;
+    font-size: 3rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.7s ease;
+}
+
+#new-entry:hover {
+    background-color: green;
+    transition: 0.7s ease;
+}
+
+#edit-entry {
+    background-color: rgb(141, 64, 64);
+    color: whitesmoke;
+    font-size: 3rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.7s ease;
+}
+
+#edit-entry:hover {
+    background-color: red;
+    transition: 0.7s ease;
+}
